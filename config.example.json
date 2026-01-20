@@ -1,0 +1,34 @@
+{
+  "data": {
+    "train": "./input/train.csv",
+    "test": "./input/test.csv",
+    "predict": "./input/test.csv",
+    "dataset": "./data/samples"
+  },
+  "output": {
+    "feature": "./output/features",
+    "model": "./output/model",
+    "prediction": "./output/predictions/predictions.csv",
+    "log": "./output/logs"
+  },
+  "feature": {
+    "section_name": ".block_1"
+  },
+  "vectorize": {
+    "method": "ngram_numeric",
+    "size_features": 256,
+    "offset": 0,
+    "ngram_size": 2,
+    "encoding": "TF"
+  },
+  "model": {
+    "type": "SVM",
+    "params": {
+      "C": 100,
+      "gamma": 0.001,
+      "kernel": "rbf"
+    }
+  },
+  "classify": true,
+  "seed": 8017
+}
