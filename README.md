@@ -1,5 +1,11 @@
 # upxelfdet
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python Version](https://img.shields.io/badge/python-3.12%2B-blue.svg)](https://www.python.org/downloads/)
+[![GitHub release](https://img.shields.io/github/v/release/bolin8017/upxelfdet)](https://github.com/bolin8017/upxelfdet/releases)
+[![GitHub issues](https://img.shields.io/github/issues/bolin8017/upxelfdet)](https://github.com/bolin8017/upxelfdet/issues)
+[![GitHub stars](https://img.shields.io/github/stars/bolin8017/upxelfdet)](https://github.com/bolin8017/upxelfdet/stargazers)
+
 A machine learning-based detector for identifying UPX-packed ELF malware using n-gram feature extraction and Support Vector Machine (SVM) classification.
 
 ## Overview
