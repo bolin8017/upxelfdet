@@ -94,7 +94,7 @@ Create or modify `config.json`:
     "train": "./input/train.csv",
     "test": "./input/test.csv",
     "predict": "./input/test.csv",
-    "dataset": "./input/dataset"
+    "dataset": "./data/samples"
   },
   "output": {
     "feature": "./output/features",
