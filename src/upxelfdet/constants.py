@@ -13,6 +13,11 @@ from typing import Final, Literal
 CONFIG_VERSION: Final[str] = "1.0"
 
 # =============================================================================
+# Output Paths
+# =============================================================================
+DEFAULT_OUTPUT_PATH_VECTORIZE: Final[str] = "output/vectorize"
+
+# =============================================================================
 # Feature Extraction Configuration
 # =============================================================================
 DEFAULT_SECTION_NAME: Final[str] = ".block_1"

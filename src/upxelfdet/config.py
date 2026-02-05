@@ -21,7 +21,11 @@ Typical usage:
 from pathlib import Path
 from typing import Any, Self
 
-from maldet.config import BaseDetectorConfig, DataConfig as BaseDataConfig
+from maldet.config import (
+    BaseDetectorConfig,
+    DataConfig as BaseDataConfig,
+    OutputConfig as BaseOutputConfig,
+)
 from pydantic import BaseModel, ConfigDict, field_validator, model_validator
 
 from .constants import (
@@ -30,6 +34,7 @@ from .constants import (
     DEFAULT_MODEL_TYPE,
     DEFAULT_NGRAM_SIZE,
     DEFAULT_OFFSET,
+    DEFAULT_OUTPUT_PATH_VECTORIZE,
     DEFAULT_SECTION_NAME,
     DEFAULT_SIZE_FEATURES,
     DEFAULT_SVM_PARAMS,
@@ -56,6 +61,20 @@ class DataConfig(BaseDataConfig):
     """
 
     dataset: Path = Path("./data/dataset")
+
+
+class OutputConfig(BaseOutputConfig):
+    """Extended output configuration with vectorize path.
+
+    Attributes:
+        model: Path to save/load trained model.
+        feature: Path to save extracted features.
+        prediction: Path to save prediction results.
+        log: Path to save log files.
+        vectorize: Path to save vectorized features.
+    """
+
+    vectorize: Path = Path(DEFAULT_OUTPUT_PATH_VECTORIZE)
 
 
 class FeatureConfig(BaseModel):
@@ -189,6 +208,7 @@ class UpxElfDetectorConfig(BaseDetectorConfig):
     """
 
     data: DataConfig = DataConfig()
+    output: OutputConfig = OutputConfig()
     feature: FeatureConfig = FeatureConfig()
     vectorize: VectorizeConfig = VectorizeConfig()
     model: ModelConfig = ModelConfig()

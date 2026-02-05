@@ -332,7 +332,7 @@ class UpxElfDetector(BaseDetector):
             self._vectorizer = VectorizerFactory.create(self.config.vectorize.method)
 
         # Ensure output directory exists
-        vectorize_folder = self.config.output.feature.parent / "vectorize"
+        vectorize_folder = self.config.output.vectorize
         self.ensure_directory_exists(vectorize_folder)
 
         # Create prefix directories
@@ -485,7 +485,7 @@ class UpxElfDetector(BaseDetector):
         Returns:
             Tuple of (feature_matrix, valid_indices).
         """
-        vectorize_folder = self.config.output.feature.parent / "vectorize"
+        vectorize_folder = self.config.output.vectorize
 
         vectors = []
         valid_indices = []
@@ -538,7 +538,7 @@ class UpxElfDetector(BaseDetector):
         if self._predictor is None:
             self._predictor = Predictor()
 
-        vectorize_folder = self.config.output.feature.parent / "vectorize"
+        vectorize_folder = self.config.output.vectorize
 
         return self._predictor.predict(
             df=df,
