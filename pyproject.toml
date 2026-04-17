@@ -1,6 +1,6 @@
 [project]
 name = "upxelfdet"
-version = "0.2.0"
+version = "0.5.0"
 description = "A machine learning detector for UPX-packed ELF malware"
 readme = "README.md"
 license = { text = "MIT" }
@@ -20,7 +20,7 @@ classifiers = [
     "Topic :: Scientific/Engineering :: Artificial Intelligence",
 ]
 dependencies = [
-    "islab-malware-detector>=0.4.0",
+    "islab-malware-detector[mlflow]>=0.5.0",
     "upx-elf-parser>=0.1.0",
     "numpy>=1.24.0",
     "pandas>=2.0.0",
